@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d5d6fd9-ea06-4e9b-9390-7b9f9c9979d5" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw1/task_1/DragonQuest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw1/task_1/Knight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw1/task_1/KnightConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw1/task_1/MainQuest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw1/task_1/PrincessQuest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw1/task_1/Quest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw1/task_2/readme" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -48,16 +42,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15429688",
     "project.structure.side.proportion": "0.31034482",
+    "spring.configuration.checksum": "fe112f8eca03d74dc01dbac45c789b32",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -89,7 +86,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1689525034781</updated>
-      <workItem from="1689525035873" duration="3794000" />
+      <workItem from="1689525035873" duration="5219000" />
+      <workItem from="1691307193539" duration="1361000" />
+      <workItem from="1691427607000" duration="1740000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <option name="closed" value="true" />
@@ -99,7 +98,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689526265929</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit">
+      <option name="closed" value="true" />
+      <created>1689536102097</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1689536102097</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 class KnightConfig {
     @Bean
     Quest quest(){
-        System.out.println("Congratulaions in winning!");
+        System.out.println("Congratulations on winning!");
         return new DragonQuest();
     }
     @Bean
