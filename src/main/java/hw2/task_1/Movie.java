@@ -1,5 +1,5 @@
 package hw2.task_1;
-interface Movie {
+public interface Movie {
     void init();
     void getInfo();
 }

@@ -11,12 +11,7 @@
     <bean id = "movie"
           class="hw2.task_1.FirstMovie"
           init-method="init">
-
         <constructor-arg value="${movie1.title}"/>
         <property name="director" value="${movie1.director}"/>
-
-
-
-
     </bean>
 </beans>
