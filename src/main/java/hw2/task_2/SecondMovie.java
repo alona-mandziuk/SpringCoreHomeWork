@@ -11,6 +11,7 @@ class SecondMovie implements Movie {
     String genre;
     String title;
     String director;
+
     public SecondMovie(@Value("${movie1.title}") String title) {
         this.title = title;
     }
