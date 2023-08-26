@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View records</title>
+</head>
+<body>
+<h2>View Records</h2>
+<a href="/">Back...</a>
+<p></p>
+<br>
+
+<div th:if="${not #lists.isEmpty(records)}">
+    <ul>
+        <li th:each="records : ${records}" th:text="${records}"></li>
+    </ul>
+</div>
+<div th:if="${#lists.isEmpty(records)}">
+    <p>No records available.</p>
+</div>
+</body>
+</html>
