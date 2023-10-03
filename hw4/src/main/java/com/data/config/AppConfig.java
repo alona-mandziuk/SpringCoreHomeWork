@@ -18,9 +18,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.thymeleaf.spring6.SpringTemplateEngine;
-import org.thymeleaf.spring6.templateresolver.SpringResourceTemplateResolver;
-import org.thymeleaf.spring6.view.ThymeleafViewResolver;
+import org.thymeleaf.spring5.SpringTemplateEngine;
+import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
+import org.thymeleaf.spring5.view.ThymeleafViewResolver;
+import org.thymeleaf.templatemode.TemplateMode;
 
 import javax.sql.DataSource;
 import java.util.Properties;
@@ -29,13 +30,13 @@ import java.util.Properties;
 @Configuration
 @EnableWebMvc
 @ComponentScan("com.data")
-@PropertySource("clathpath:application.properties")
+@PropertySource("classpath:application.properties")
 @EnableJpaRepositories("com.data.repositories")
 @EnableTransactionManagement
 
 public class AppConfig implements WebMvcConfigurer {
     private final ApplicationContext applicationContext;
-    private  final Environment environment;
+    private final Environment environment;
 
     @Autowired
     public AppConfig(ApplicationContext applicationContext, Environment environment) {
@@ -44,15 +45,14 @@ public class AppConfig implements WebMvcConfigurer {
     }
 
 
-
     @Bean
     public SpringResourceTemplateResolver templateResolver() {
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
         templateResolver.setApplicationContext(applicationContext);
         templateResolver.setPrefix("/WEB-INF/views/");
         templateResolver.setSuffix(".html");
-       // templateResolver.setTemplateMode(TemplateMode.HTML);
-     //   templateResolver.setCharacterEncoding("UTF-8");
+        templateResolver.setTemplateMode(TemplateMode.HTML);
+        templateResolver.setCharacterEncoding("UTF-8");
         return templateResolver;
     }
 
@@ -64,7 +64,7 @@ public class AppConfig implements WebMvcConfigurer {
         return templateEngine;
     }
 
-    @Override
+
     public void configureViewResolvers(ViewResolverRegistry registry) {
         ThymeleafViewResolver resolver = new ThymeleafViewResolver();
         resolver.setTemplateEngine(templateEngine());
@@ -82,6 +82,7 @@ public class AppConfig implements WebMvcConfigurer {
 
         return dataSource;
     }
+
     private Properties hibernateProperties() {
         Properties properties = new Properties();
         properties.put("hibernate.dialect", environment.getRequiredProperty("hibernate.dialect"));

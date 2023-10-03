@@ -10,7 +10,7 @@ import java.util.List;
 
 
 @Service
-@Transactional
+@Transactional(readOnly = true)
 public class PeopleServices {
     private final PeopleRepository peopleRepository;
 
@@ -32,8 +32,10 @@ public class PeopleServices {
         peopleRepository.deletePersonById(id);
     }
 
+    @Transactional
     public void updatePersonById(int id, Person person) {
-        peopleRepository.updatePersonInfoById(id, person);
+        peopleRepository.updatePersonInfoById
+                (id, person.getAge(), person.getEmail(), person.getName());
     }
 
 

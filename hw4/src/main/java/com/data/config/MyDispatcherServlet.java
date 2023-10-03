@@ -1,5 +1,6 @@
 package com.data.config;
 
+
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.filter.HiddenHttpMethodFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
@@ -27,7 +28,7 @@ public class MyDispatcherServlet extends AbstractAnnotationConfigDispatcherServl
     }
 
     @Override
-    public void onStartup (ServletContext aServletContext) throws ServletException{
+    public void onStartup(ServletContext aServletContext) throws ServletException {
         super.onStartup(aServletContext);
         registerCharacterEncodingFilter(aServletContext);
         registerHiddenFieldFilter(aServletContext);
